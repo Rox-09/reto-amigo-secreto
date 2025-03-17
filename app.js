@@ -24,5 +24,14 @@ function sortearAmigo(){
     let amigoseleccionado=amigos[sortear]
     let resultado=document.getElementById("resultado")
     resultado.innerHTML=amigoseleccionado
+
+    document.getElementById("listaAmigos").innerHTML="";
+    
+    if(amigos.length === 0){
+        alert("sorteo completado");
+        document.location.reload();
+
+    }
+    amigos.splice(sortear, 1)
 }
 
